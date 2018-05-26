@@ -21,11 +21,12 @@
 
 <p>
   <strong>Content:</strong>
-  <%= gid = @user.id
+  <%=
       first_user = User.find(@user.id)
-
       micropost = first_user.microposts.first
-      micropost.content
+      unless micropost == nil then
+        micropost.content
+      end
   %>
 
 </p>
